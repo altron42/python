@@ -4,8 +4,6 @@ Codigos das atividades de IC
 
 ## Atividade 1 - Definições Condicionais
 
-Exercícios sobre "Definições Condicionais", para desenvolvimento durante a 5a. e 6a. feiras de realização do SAP IComp/UFAM.
-
 1. Defina a função **pd(c)** cuja avaliação associa o consumo de dados em gigabytes com o valor pago em reais, calculado conforme as situações abaixo. O cálculo do custo de consumo fracionários são aproximados para o inteiro mais próximo (por exemplo, 6.3GB é cobrado como 7GB).
    * Para consumos até 2GB, o valor é 20
    * Para consumos maiores que 2GB, até 5GB, o valor é 20 + 5 por cada GB
