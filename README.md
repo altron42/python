@@ -27,7 +27,7 @@ Codigos das atividades de IC
 
 ```python
 >>> pano_amarelo(x1,y1,x2,y2)
-```python
+```
 
 ![Bandeira do Brasil][bandeiraBR.jpg]
 
