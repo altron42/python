@@ -54,7 +54,8 @@ def tail(xs): ?
 # Ultimo elemento de uma lista xs
 def last(xs): ?
 # Sublista similar a xs mas sem o ultimo elemento
-def init(xs): ?```
+def init(xs): ?
+```
 
 ### Exercício 2
 
