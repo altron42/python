@@ -42,19 +42,19 @@ A parte verde é um retângulo de lados **(y1-y2)** e **(x2-x1)**. A parte em am
 ### Exercício 1
 
 Conforme orientação em sala de aulas, definas as seguintes funções para definição de sublistas:
-
-* Lista com os k primeiros elementos de uma lista xs:
-   * `def take(k,xs): ?`
-* Lista com os elementos de xs seguintes aos k primeiros:
-   * `def drop(k,xs): ?`
-* Primeiro elemento de uma lista xs:
-   * `def head(xs): ?`
-* Sublista similar a xs mas sem o primeiro elemento:
-  * `def tail(xs): ?`
-* Ultimo elemento de uma lista xs
-  * `def last(xs): ?`
-* Sublista similar a xs mas sem o ultimo elemento
-  * `def init(xs): ?`
+```python
+# Lista com os k primeiros elementos de uma lista xs
+def take(k,xs): ?
+# Lista com os elementos de xs seguintes aos k primeiros
+def drop(k,xs): ?
+# Primeiro elemento de uma lista xs
+def head(xs): ?
+# Sublista similar a xs mas sem o primeiro elemento
+def tail(xs): ?
+# Ultimo elemento de uma lista xs
+def last(xs): ?
+# Sublista similar a xs mas sem o ultimo elemento
+def init(xs): ?```
 
 ### Exercício 2
 
