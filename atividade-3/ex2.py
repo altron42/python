@@ -30,5 +30,7 @@ def reprovadosNota(nfs):
 def reprovadosFalta(nfs):
 	return [(n,f,s) for (n,f,s) in nfs if reprovadoFalta(s)]
 
+def reprovadosNotaFalta(nfs):
+	return [(n,f,s) for (n,f,s) in nfs if not aprovado(f,s)]
 
 #def rfinal(nfs):
