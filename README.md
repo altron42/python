@@ -13,15 +13,21 @@ Codigos das atividades de IC
 
 ## Atividade 2 - Lista de Exercícios
 
-**Exercício 1**: Defina a função `intersec(x1,y1,x2,y2,x3,y3,x4,y4)` que sucede se, no plano cartesiano, há intersecção entre dois retângulos definidos pelos pontos superior esquerdo e inferior direito: **(x1,y1)** e **(x2,y2)** para o primeiro retângulo e **(x3,y3)** e **(x4,y4)** para o segundo.
+### Exercício 1
 
+Defina a função `intersec(x1,y1,x2,y2,x3,y3,x4,y4)` que sucede se, no plano cartesiano, há intersecção entre dois retângulos definidos pelos pontos superior esquerdo e inferior direito: **(x1,y1)** e **(x2,y2)** para o primeiro retângulo e **(x3,y3)** e **(x4,y4)** para o segundo.
 
-**Exercício 2**: A tarifação de uma ligação telefônica internacional é feita do seguinte modo: O valor mínimo é de R$5, que dá direito a uma ligação de até 5 minutos. Quando a duração é de até 10 minutos, são cobrados R$7. Ligações com mais de 10 minutos pagam R$1 por cada minuto adicional (somados aos R$7 iniciais). Defina a função `tarifa(m)` que associa o valor do custo da ligação com duração de `m` minutos. Por exemplo:
+### Exercício 2
+
+A tarifação de uma ligação telefônica internacional é feita do seguinte modo: O valor mínimo é de R$5, que dá direito a uma ligação de até 5 minutos. Quando a duração é de até 10 minutos, são cobrados R$7. Ligações com mais de 10 minutos pagam R$1 por cada minuto adicional (somados aos R$7 iniciais). Defina a função `tarifa(m)` que associa o valor do custo da ligação com duração de `m` minutos. Por exemplo:
 ```python
 >>> tarifa(12)
 9
 ```
-**Exercício 3**: Um torcedor fanático deseja confeccionar uma bandeira do Brasil "estilizada" para usar durante os jogos olímpicos de 2016. Ele já tem a quantidade de panos verde e azul exatas e precisa saber quantos metros de pano amarelo vai precisar comprar. Calcule a quantidade de pano amarelo (em metros quadrados), considerando que a bandeira está no plano cartesiano, e que sabemos os valores dos pontos superior esquerdo **(x1, y1)** e inferior direito **(x2, y2)** do retângulo conforme ilustrado na figura abaixo:
+
+### Exercício 3
+
+Um torcedor fanático deseja confeccionar uma bandeira do Brasil "estilizada" para usar durante os jogos olímpicos de 2016. Ele já tem a quantidade de panos verde e azul exatas e precisa saber quantos metros de pano amarelo vai precisar comprar. Calcule a quantidade de pano amarelo (em metros quadrados), considerando que a bandeira está no plano cartesiano, e que sabemos os valores dos pontos superior esquerdo **(x1, y1)** e inferior direito **(x2, y2)** do retângulo conforme ilustrado na figura abaixo:
 ```python
 >>> pano_amarelo(x1,y1,x2,y2)
 ```
@@ -30,3 +36,31 @@ Codigos das atividades de IC
 [bandeiraBR.jpg]: atividade-2/bandeiraBR.jpg "Bandeira do Brasil"
 
 A parte verde é um retângulo de lados **(y1-y2)** e **(x2-x1)**. A parte em amarelo refere-se a um quadrado "girado" em 90 graus com diagonal igual a **(y1-y2)**. O círculo azul refere-se a um círculo com diâmetro igual a **(y1-y2)**.
+
+## Atividade 3 - Operações sobre listas
+
+### Exercício 1
+
+Conforme orientação em sala de aulas, definas as seguintes funções para definição de sublistas:
+
+* Lista com os k primeiros elementos de uma lista xs:
+   * `def take(k,xs): ?`
+* Lista com os elementos de xs seguintes aos k primeiros:
+   * `def drop(k,xs): ?`
+* Primeiro elemento de uma lista xs:
+   * `def head(xs): ?`
+* Sublista similar a xs mas sem o primeiro elemento:
+  * `def tail(xs): ?`
+* Ultimo elemento de uma lista xs
+  * `def last(xs): ?`
+* Sublista similar a xs mas sem o ultimo elemento
+  * `def init(xs): ?`
+
+### Exercício 2
+
+Dado uma lista de triplas contendo o número de matrícula, a nota final (0-10) e a frequência (0-100) de alunos de certa disciplina, defina a função `rfinal(nfs)` cuja avaliação associe uma tupla formada por 4 listas onde:
+
+1. a primeira lista contém as tuplas com alunos aprovados,
+1. a segunda com alunos reprovados por nota,
+1. a terceira com alunos reprovados por falta,
+1. a quarta com alunos reprovados por nota e por falta.
