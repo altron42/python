@@ -10,16 +10,17 @@ from math import *
 
 # dados nota final e frequencia, verifica se aprovado
 def aprovado(nf,freq):
-	if (nf >= 5) and (freq >= 75):
-		return True
-	else:
-		return False
+	return (nf >= 5) and (freq >= 75)
+
+def reprovadoNota(nf):
+	return nf < 5
 
 # retorna lista de tuplas com alunos aprovados
 def aprovados(nfs):
 	return [(n,f,s) for (n,f,s) in nfs if aprovado(f,s)]
 
+# retorna lista de tuplas com alunos reprovados por nota
+def reprovadosNota(nfs):
+	return [(n,f,s) for (n,f,s) in nfs if reprovadoNota(f)]
 
-
-def rfinal(nfs):
-	
+#def rfinal(nfs):
