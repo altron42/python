@@ -138,7 +138,7 @@ Uma ponta ainda não aberta é representada por lista vazia. Dizemos que há mar
 
 ![Figura 1 - Mesa][figura01-mesa.jpg]
 
-[figura01-mesa.jpg]: lista-1/mesa-domino "Figura 1 - Mesa"
+[figura01-mesa.jpg]: lista-1/figura01-mesa.jpg "Figura 1 - Mesa"
 
 **P17**: Escreva a função `mesap` que associe uma quadrupla de listas a True sss a quadrupla for uma descrição válida de "mesa".
 
