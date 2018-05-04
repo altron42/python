@@ -68,13 +68,13 @@ Dado uma lista de triplas contendo o número de matrícula, a nota final (0-10) 
 
 ## Lista de Exercícios – Maio/2018
 
-PARTE I – O jogo do Dominó (Blocos 1 a 4)
+[PARTE I – O jogo do Dominó (Blocos 1 a 4)][label-parte1]
 
-PARTE II – Tuplas e Listas em Geral
+[PARTE II – Tuplas e Listas em Geral][label-parte2]
 
-PARTE III – Processamento de Cadeia de Caracteres
+[PARTE III – Processamento de Cadeia de Caracteres][label-parte3]
 
-## PARTE I – O jogo do Dominó
+[label-parte1]: ## PARTE I – O jogo do Dominó
 
 A Lista de problemas que enunciaremos a seguir é baseada em uma das várias formas de se jogar "dominó". As explicações que serão apresentadas não se destinam a ensinar o jogo mas simplesmente dar contexto para os problemas.
 
@@ -84,19 +84,23 @@ Para jogar, as "pedras" são embaralhadas e escolhidas pelos jogadores. A cada j
 
 ### Parte I – Bloco I
 
-P01: Escreva a função `pedrap` que associe um par a True se e somente se (sss) o par é uma representação válida para uma "pedra" e False caso contrário.
+**P01**: Escreva a função `pedrap` que associe um par a True se e somente se (sss) o par é uma representação válida para uma "pedra" e False caso contrário.
+```python
+>>> pedrap(2,7)
+False
+>>> pedrap((-3),4)
+False
+>>> pedrap(3,4)
+True
+```
 
-`pedrap(2,7) ==> False`
-`pedrap((-3),4) ==> False`
-`pedrap(3,4) ==> True`
+**P02**: Escreva a função `maop` que associe uma lista de pares de inteiros a True sss a lista é uma representação válida para a "mão" de um jogador e False caso contrário.
 
-P02: Escreva a função `maop` que associe uma lista de pares de inteiros a True sss a lista é uma representação válida para a "mão" de um jogador e False caso contrário.
+**P03**: Escreva a função `carrocap` que associe um par a True sss o par é uma "carroça" e False caso contrário.
 
-P03: Escreva a função `carrocap` que associe um par a True sss o par é uma "carroça" e False caso contrário.
+**P04**: Escreva a função `tem_carroca_p` que associe uma "mão" a True sss a mão possuir pelo menos uma carroça e False caso contrário.
 
-P04: Escreva a função `tem_carroca_p` que associe uma "mão" a True sss a mão possuir pelo menos uma carroça e False caso contrário.
-
-P05: Escreva a função `tem_carrocas` que associe a uma "mão" a lista das "carroças" nela contida.
+**P05**: Escreva a função `tem_carrocas` que associe a uma "mão" a lista das "carroças" nela contida.
 
 ### Parte I – Bloco 2
 
@@ -188,7 +192,7 @@ P33: Escreva a função `pedra_de_maior_ponto` que associa uma mesa no formato 1
 
 P34: Escreva a função `pedras_fora_p` que associa uma mesa no formato 2 e uma pedra com True sss ela ainda não foi jogada.
 
-## PARTE II – Tuplas e Listas em Geral
+[label-parte2]: ## PARTE II – Tuplas e Listas em Geral
 
 P35: Defina a função `somavet` que determine a soma de dois vetores x e y, de origem no ponto (0,0) e situados no primeiro quadrante do plano cartesiano.
 
@@ -200,7 +204,7 @@ P38: Defina a função `intersec` que a partir de duas listas de elementos disti
 
 P39: Defina a função `uni` que dadas duas listas de elementos distintos, determina a união entre elas.
 
-## PARTE III – Processamento de Cadeia de Caracteres
+[label-parte3]: ## PARTE III – Processamento de Cadeia de Caracteres
 
 Escrever funções para descrever cada uma das situações abaixo descritas (o nome da função é indicado ao final de cada item):
 
