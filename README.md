@@ -68,7 +68,7 @@ Dado uma lista de triplas contendo o número de matrícula, a nota final (0-10) 
 
 ## Lista de Exercícios – Maio/2018
 
-[PARTE I – O jogo do Dominó](#parte-i--o-jogo-do-domino)
+[PARTE I – O jogo do Dominó](#parte-i--o-jogo-do-dominó)
 
 [PARTE II – Tuplas e Listas em Geral](#parte-ii--tuplas-e-listas-em-geral)
 
