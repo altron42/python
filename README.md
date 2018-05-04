@@ -68,13 +68,13 @@ Dado uma lista de triplas contendo o número de matrícula, a nota final (0-10) 
 
 ## Lista de Exercícios – Maio/2018
 
-[PARTE I – O jogo do Dominó (Blocos 1 a 4)][label-parte1]
+[PARTE I – O jogo do Dominó][label-parte1]
 
 [PARTE II – Tuplas e Listas em Geral][label-parte2]
 
 [PARTE III – Processamento de Cadeia de Caracteres][label-parte3]
 
-[label-parte1]: ## PARTE I – O jogo do Dominó
+[label-parte1]: PARTE I – O jogo do Dominó
 
 A Lista de problemas que enunciaremos a seguir é baseada em uma das várias formas de se jogar "dominó". As explicações que serão apresentadas não se destinam a ensinar o jogo mas simplesmente dar contexto para os problemas.
 
