@@ -18,3 +18,10 @@ def inteirop(a):
 
 def valorp(a):
 	return not ((a < 0) or (a >6))
+
+# P02
+def maop(mao):
+	if len(mao)>7: return False
+	for pedra in mao:
+		if not pedrap(pedra[0],pedra[1]): return False
+	return True
