@@ -23,3 +23,10 @@ def garagem(pedras):
 	soma=pontos(pedras)
 	resto=soma%5
 	return soma-resto
+
+# P08
+def pedra_igual_p(pedraA,pedraB):
+	(a,b)=pedraA
+	(c,d)=pedraB
+	if a==d and b==c: return True
+	else: return False
