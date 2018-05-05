@@ -9,11 +9,17 @@
 from math import *
 
 # P06
-def pontos(mao):
+def pontos(pedras):
 	soma=0
-	for pedra in mao:
+	for pedra in pedras:
 		soma=soma+pontospedra(pedra[0],pedra[1])
 	return soma
 
 def pontospedra(a,b):
 	return a+b
+
+# P07
+def garagem(pedras):
+	soma=pontos(pedras)
+	resto=soma%5
+	return soma-resto
