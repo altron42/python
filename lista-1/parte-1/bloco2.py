@@ -28,5 +28,11 @@ def garagem(pedras):
 def pedra_igual_p(pedraA,pedraB):
 	(a,b)=pedraA
 	(c,d)=pedraB
-	if a==d and b==c: return True
+	if (a==d and b==c) or (a==c and b==d): return True
 	else: return False
+
+# P09
+def ocorre_pedra_p(pedra,mao):
+	for pedraX in mao:
+		if pedra_igual_p(pedra,pedraX): return True
+	return False
