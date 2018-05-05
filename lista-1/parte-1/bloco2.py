@@ -36,3 +36,9 @@ def ocorre_pedra_p(pedra,mao):
 	for pedraX in mao:
 		if pedra_igual_p(pedra,pedraX): return True
 	return False
+
+# P10
+def ocorre_valor_p(ponta,mao):
+	for pedra in mao:
+		if ponta==pedra[0] or ponta==pedra[1]: return True
+	return False
