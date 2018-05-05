@@ -30,3 +30,9 @@ def maop(mao):
 def carrocap(a,b):
 	if pedrap(a,b) and a==b: return True
 	else: return False
+
+# P04
+def tem_carroca_p(mao):
+	for pedra in mao:
+		if carrocap(pedra[0],pedra[1]): return True
+	return False
