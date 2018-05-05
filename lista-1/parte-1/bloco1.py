@@ -36,3 +36,7 @@ def tem_carroca_p(mao):
 	for pedra in mao:
 		if carrocap(pedra[0],pedra[1]): return True
 	return False
+
+# P05
+def tem_carrocas(mao):
+	return [(a,b) for (a,b) in mao if carrocap(a,b)]
