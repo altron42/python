@@ -39,7 +39,7 @@ def ocorre_pedra_p(pedra,mao):
 
 # P10
 def ocorre_valor_p(ponta,mao):
-	if ponta<0 or ponta >6: return False
+	if ponta<0 or ponta>6: return False
 	else:
 		for pedra in mao:
 			if ponta==pedra[0] or ponta==pedra[1]: return True
@@ -52,3 +52,13 @@ def ocorre_pedra(ponta,mao):
 def ocorre_ponta_pedra(ponta,pedra):
 	if ponta==pedra[0] or ponta==pedra[1]: return True
 	else: return False
+
+# P12
+def pedra_maior(mao):
+	maior=0
+	pedraMaior = (0,0)
+	for pedra in mao:
+		if pontospedra(pedra[0],pedra[1]) > maior:
+			pedraMaior = pedra
+			maior = pontospedra(pedra[0],pedra[1])
+	return pedraMaior
