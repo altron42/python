@@ -25,3 +25,8 @@ def maop(mao):
 	for pedra in mao:
 		if not pedrap(pedra[0],pedra[1]): return False
 	return True
+
+# P03
+def carrocap(a,b):
+	if pedrap(a,b) and a==b: return True
+	else: return False
