@@ -8,4 +8,13 @@
 
 from math import *
 
+# P01
+def pedrap(a,b):
+	if inteirop(a) and inteirop(b) and valorp(a) and valorp(b): return True
+	else: return False
 
+def inteirop(a):
+	return isinstance(a,int)
+
+def valorp(a):
+	return not ((a < 0) or (a >6))
