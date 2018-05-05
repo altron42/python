@@ -62,3 +62,11 @@ def pedra_maior(mao):
 			pedraMaior = pedra
 			maior = pontospedra(pedra[0],pedra[1])
 	return pedraMaior
+
+# P13
+def ocorre_valor_q(valor,mao):
+	contagem=0
+	for pedra in mao:
+		if pontospedra(pedra[0],pedra[1])==valor:
+			contagem=contagem+1
+	return contagem
