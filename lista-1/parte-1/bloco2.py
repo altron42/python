@@ -70,3 +70,26 @@ def ocorre_valor_q(valor,mao):
 		if pontospedra(pedra[0],pedra[1])==valor:
 			contagem=contagem+1
 	return contagem
+
+# P14
+def ocorre_carroca_q(mao):
+	contagem=0
+	for pedra in mao:
+		if carrocap(pedra[0],pedra[1]): contagem=contagem+1
+	return contagem
+
+# P01
+def pedrap(a,b):
+	if inteirop(a) and inteirop(b) and valorp(a) and valorp(b): return True
+	else: return False
+
+def inteirop(a):
+	return isinstance(a,int)
+
+def valorp(a):
+	return not ((a < 0) or (a >6))
+
+# P03
+def carrocap(a,b):
+	if pedrap(a,b) and a==b: return True
+	else: return False
