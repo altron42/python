@@ -86,3 +86,8 @@ def valorp(a):
 def carrocap(a,b):
 	if pedrap(a,b) and a==b: return True
 	else: return False
+
+# P15
+def tira_maior(mao):
+	pedraMaior = pedra_maior(mao)
+	return [pedra for pedra in mao if not pedra_igual_p(pedraMaior,pedra)]
