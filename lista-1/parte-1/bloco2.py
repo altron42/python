@@ -46,12 +46,8 @@ def ocorre_valor_p(ponta,mao):
 	return False
 
 # P11
-def ocorre_pedra(ponta,mao):
-	return [pedra for pedra in mao if ocorre_ponta_pedra(ponta,pedra)]
-
-def ocorre_ponta_pedra(ponta,pedra):
-	if ponta==pedra[0] or ponta==pedra[1]: return True
-	else: return False
+def ocorre_pedra(valor,mao):
+	return [pedra for pedra in mao if valor==pontospedra(pedra[0],pedra[1])]
 
 # P12
 def pedra_maior(mao):
@@ -80,11 +76,8 @@ def ocorre_carroca_q(mao):
 
 # P01
 def pedrap(a,b):
-	if inteirop(a) and inteirop(b) and valorp(a) and valorp(b): return True
+	if valorp(a) and valorp(b): return True
 	else: return False
-
-def inteirop(a):
-	return isinstance(a,int)
 
 def valorp(a):
 	return not ((a < 0) or (a >6))
