@@ -47,7 +47,7 @@ def ocorre_valor_p(ponta,mao):
 
 # P11
 def ocorre_pedra(valor,mao):
-	return [pedra for pedra in mao if valor==pontospedra(pedra[0],pedra[1])]
+	return [pedra for pedra in mao if (valor==pedra[0] or valor==pedra[1])]
 
 # P12
 def pedra_maior(mao):
@@ -63,7 +63,7 @@ def pedra_maior(mao):
 def ocorre_valor_q(valor,mao):
 	contagem=0
 	for pedra in mao:
-		if pontospedra(pedra[0],pedra[1])==valor:
+		if valor==pedra[0] or valor==pedra[1]:
 			contagem=contagem+1
 	return contagem
 
@@ -91,3 +91,8 @@ def carrocap(a,b):
 def tira_maior(mao):
 	pedraMaior = pedra_maior(mao)
 	return [pedra for pedra in mao if not pedra_igual_p(pedraMaior,pedra)]
+
+# P16
+def tira_maior_v(valor,mao):
+	pedraRetirar = pedra_maior(ocorre_pedra(valor,mao))
+	return [pedra for pedra in mao if not pedra_igual_p(pedraRetirar,pedra)]
