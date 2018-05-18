@@ -15,12 +15,21 @@ def mesap(mesa):
 
 # P18
 def carroca_m_p(mesa):
-	for pedra in mesa:
-		if carrocap(pedra): return True
+	for ponta in mesa:
+		if carrocap(ponta): return True
 	return False
 
 # P03
-def carrocap(pedra):
-	if len(pedra)==1: return False
-	elif pedra[0]==pedra[1]: return True
+def carrocap(ponta):
+	if len(ponta)==1: return False
+	elif ponta[0]==ponta[1]: return True
 	else: return False
+
+# P19
+def pontos_marcados(mesa):
+	soma=0
+	for ponta in mesa:
+		soma=soma+ponta[0]
+		if len(ponta)>1: soma=soma+ponta[1]
+	if soma%5==0: return soma
+	else: return 0
