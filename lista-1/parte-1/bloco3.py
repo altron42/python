@@ -33,3 +33,11 @@ def pontos_marcados(mesa):
 		if len(ponta)>1: soma=soma+ponta[1]
 	if soma%5==0: return soma
 	else: return 0
+
+# P20
+def pode_jogar_p(pedra,mesa):
+	pontaA=pedra[0]
+	pontaB=pedra[1]
+	for ponta in mesa:
+		if ponta[0]==pontaA or ponta[0]==pontaB: return True
+	return False
