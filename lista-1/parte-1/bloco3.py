@@ -41,3 +41,77 @@ def pode_jogar_p(pedra,mesa):
 	for ponta in mesa:
 		if ponta[0]==pontaA or ponta[0]==pontaB: return True
 	return False
+
+# P21
+def marca_ponto_p(pedra,mesa):
+	pontaA=pedra[0]
+	pontaB=pedra[1]
+	temp=pontos_marcados(mesa)
+	if not pode_jogar_p(pedra,mesa): return False
+	for ponta in mesa:
+		print(temp)
+		if carrocap(ponta):
+			temp=temp-(2*ponta[0])
+			print(temp)
+			if ponta[0]==pontaA:
+				temp=temp+pontaB
+				if carrocap(pedra): temp=temp+pontaB
+				if temp%5==0:
+					return True
+				else:
+					temp=temp-pontaB
+					if carrocap(pedra): temp=temp-pontaB
+			elif ponta[0]==pontaB:
+				temp=temp+pontaA
+				if carrocap(pedra): temp=temp+pontaA
+				if temp%5==0:
+					return True
+				else:
+					temp=temp-pontaA
+					if carrocap(pedra): temp=temp-pontaA
+			temp=temp+(2*ponta[0])
+			print(temp)
+		else:
+			temp=temp-ponta[0]
+			print(temp)
+			if ponta[0]==pontaA:
+				temp=temp+pontaB
+				if carrocap(pedra): temp=temp+pontaB
+				print(temp)
+				if temp%5==0:
+					return True
+				else:
+					temp=temp-pontaB
+					if carrocap(pedra): temp=temp-pontaB
+			elif ponta[0]==pontaB:
+				temp=temp+pontaA
+				if carrocap(pedra): temp=temp+pontaA
+				print(temp)
+				if temp%5==0:
+					return True
+				else:
+					temp=temp-pontaA
+					if carrocap(pedra): temp=temp-pontaA
+			temp=temp+ponta[0]
+			print(temp)
+	return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
