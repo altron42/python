@@ -79,7 +79,39 @@ def pontuacao(mesa):
 		if len(ponta)>1: soma=soma+ponta[1]
 	return soma
 
-
+# P22
+def maior_ponto(pedra,mesa):
+	pontaA=pedra[0]
+	pontaB=pedra[1]
+	pontos=pontuacao(mesa)
+	maior=0
+	maiorIndice=-1
+	indice=0
+	for ponta in mesa:
+		if not carrocap(pedra) and not carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-ponta[0]+pontaB)%5==0 and (pontos-ponta[0]+pontaB)>maior:
+					maiorIndice=indice
+			elif pontaB==ponta[0]:
+				if (pontos-ponta[0]+pontaA)%5==0 and (pontos-ponta[0]+pontaA)>maior:
+					maiorIndice=indice
+		elif carrocap(pedra) and not carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-ponta[0]+(2*pontaA))%5==0 and (pontos-ponta[0]+(2*pontaA))>maior:
+					maiorIndice=indice
+		elif not carrocap(pedra) and carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-(2*ponta[0])+pontaB)%5==0 and (pontos-(2*ponta[0])+pontaB)>maior:
+					maiorIndice=indice
+			elif pontaB==ponta[0]:
+				if (pontos-(2*ponta[0])+pontaA)%5==0 and (pontos-(2*ponta[0])+pontaA)>maior:
+					maiorIndice=indice
+		else:
+			if pontaA==ponta[0]:
+				if pontos%5==0 and pontos>maior:
+					maiorIndice=indice
+		indice=indice+1
+	return maiorIndice
 
 
 
