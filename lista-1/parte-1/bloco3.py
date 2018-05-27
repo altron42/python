@@ -46,50 +46,40 @@ def pode_jogar_p(pedra,mesa):
 def marca_ponto_p(pedra,mesa):
 	pontaA=pedra[0]
 	pontaB=pedra[1]
-	temp=pontos_marcados(mesa)
-	if not pode_jogar_p(pedra,mesa): return False
+	pontos=pontuacao(mesa)
 	for ponta in mesa:
-		if carrocap(ponta):
-			temp=temp-(2*ponta[0])
-			if ponta[0]==pontaA:
-				temp=temp+pontaB
-				if carrocap(pedra): temp=temp+pontaB
-				if temp%5==0:
+		if not carrocap(pedra) and not carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-ponta[0]+pontaB)%5==0:
 					return True
-				else:
-					temp=temp-pontaB
-					if carrocap(pedra): temp=temp-pontaB
-			elif ponta[0]==pontaB:
-				temp=temp+pontaA
-				if carrocap(pedra): temp=temp+pontaA
-				if temp%5==0:
+			elif pontaB==ponta[0]:
+				if (pontos-ponta[0]+pontaA)%5==0:
 					return True
-				else:
-					temp=temp-pontaA
-					if carrocap(pedra): temp=temp-pontaA
-			temp=temp+(2*ponta[0])
+		elif carrocap(pedra) and not carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-ponta[0]+(2*pontaA))%5==0:
+					return True
+		elif not carrocap(pedra) and carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-(2*ponta[0])+pontaB)%5==0:
+					return True
+			elif pontaB==ponta[0]:
+				if (pontos-(2*ponta[0])+pontaA)%5==0:
+					return True
 		else:
-			temp=temp-ponta[0]
-			if ponta[0]==pontaA:
-				temp=temp+pontaB
-				if carrocap(pedra): temp=temp+pontaB
-				if temp%5==0:
+			if pontaA==ponta[0]:
+				if pontos%5==0:
 					return True
-				else:
-					temp=temp-pontaB
-					if carrocap(pedra): temp=temp-pontaB
-			elif ponta[0]==pontaB:
-				temp=temp+pontaA
-				if carrocap(pedra): temp=temp+pontaA
-				if temp%5==0:
-					return True
-				else:
-					temp=temp-pontaA
-					if carrocap(pedra): temp=temp-pontaA
-			temp=temp+ponta[0]
 	return False
-
 	
+def pontuacao(mesa):
+	soma=0
+	for ponta in mesa:
+		soma=soma+ponta[0]
+		if len(ponta)>1: soma=soma+ponta[1]
+	return soma
+
+
 
 
 
