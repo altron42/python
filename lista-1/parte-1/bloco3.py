@@ -49,10 +49,8 @@ def marca_ponto_p(pedra,mesa):
 	temp=pontos_marcados(mesa)
 	if not pode_jogar_p(pedra,mesa): return False
 	for ponta in mesa:
-		print(temp)
 		if carrocap(ponta):
 			temp=temp-(2*ponta[0])
-			print(temp)
 			if ponta[0]==pontaA:
 				temp=temp+pontaB
 				if carrocap(pedra): temp=temp+pontaB
@@ -70,14 +68,11 @@ def marca_ponto_p(pedra,mesa):
 					temp=temp-pontaA
 					if carrocap(pedra): temp=temp-pontaA
 			temp=temp+(2*ponta[0])
-			print(temp)
 		else:
 			temp=temp-ponta[0]
-			print(temp)
 			if ponta[0]==pontaA:
 				temp=temp+pontaB
 				if carrocap(pedra): temp=temp+pontaB
-				print(temp)
 				if temp%5==0:
 					return True
 				else:
@@ -86,18 +81,15 @@ def marca_ponto_p(pedra,mesa):
 			elif ponta[0]==pontaB:
 				temp=temp+pontaA
 				if carrocap(pedra): temp=temp+pontaA
-				print(temp)
 				if temp%5==0:
 					return True
 				else:
 					temp=temp-pontaA
 					if carrocap(pedra): temp=temp-pontaA
 			temp=temp+ponta[0]
-			print(temp)
 	return False
 
-
-
+	
 
 
 
