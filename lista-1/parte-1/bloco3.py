@@ -193,7 +193,10 @@ def maior_pontuacao(pedra,mesa):
 		indice=indice+1
 	return [maiorIndice,maior]
 
-
+# P26
+def faz_jogada(mao,mesa):
+	melhorJogada=jogada(mao,mesa)
+	return joga_pedra(mao[melhorJogada[0]],mesa,melhorJogada[1])
 
 
 
