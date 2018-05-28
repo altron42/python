@@ -140,7 +140,58 @@ def jogap(mao,mesa):
 		if pode_jogar_p(pedra,mesa): return True
 	return False
 
+# P25
+def jogada(mao,mesa):
+	indice=0
+	indiceMao=-1
+	indicePonta=-1
+	maior=0
+	for pedra in mao:
+		resultado=maior_pontuacao(pedra,mesa)
+		if maior<resultado[1]:
+			indicePonta=resultado[0]
+			indiceMao=indice
+		indice=indice+1
+	return [indiceMao,indicePonta]
 
+def maior_pontuacao(pedra,mesa):
+	pontaA=pedra[0]
+	pontaB=pedra[1]
+	pontos=pontuacao(mesa)
+	maior=0
+	maiorIndice=-1
+	indice=0
+	for ponta in mesa:
+		if not carrocap(pedra) and not carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-ponta[0]+pontaB)>maior:
+					maior=pontos-ponta[0]+pontaB
+					maiorIndice=indice
+			elif pontaB==ponta[0]:
+				if (pontos-ponta[0]+pontaA)>maior:
+					maior=pontos-ponta[0]+pontaA
+					maiorIndice=indice
+		elif carrocap(pedra) and not carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-ponta[0]+(2*pontaA))>maior:
+					maior=pontos-ponta[0]+(2*pontaA)
+					maiorIndice=indice
+		elif not carrocap(pedra) and carrocap(ponta):
+			if pontaA==ponta[0]:
+				if (pontos-(2*ponta[0])+pontaB)>maior:
+					maior=pontos-(2*ponta[0])+pontaB
+					maiorIndice=indice
+			elif pontaB==ponta[0]:
+				if (pontos-(2*ponta[0])+pontaA)>maior:
+					maior=pontos-(2*ponta[0])+pontaA
+					maiorIndice=indice
+		else:
+			if pontaA==ponta[0]:
+				if pontos>maior:
+					maior=pontos
+					maiorIndice=indice
+		indice=indice+1
+	return [maiorIndice,maior]
 
 
 
