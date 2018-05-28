@@ -113,13 +113,26 @@ def maior_ponto(pedra,mesa):
 		indice=indice+1
 	return maiorIndice
 
-
-
-
-
-
-
-
+# P23
+def joga_pedra(pedra,mesa,nponta):
+	pontaA=pedra[0]
+	pontaB=pedra[1]
+	if not carrocap(pedra) and not carrocap(mesa[nponta]):
+		if pontaA==mesa[nponta][0]:
+			mesa[nponta][0]=pontaB
+		else:
+			mesa[nponta][0]=pontaA
+	elif carrocap(pedra) and not carrocap(mesa[nponta]):
+		if pontaA==mesa[nponta][0]:
+			mesa[nponta]=[pontaA,pontaB]
+	elif not carrocap(pedra) and carrocap(mesa[nponta]):
+		if pontaA==mesa[nponta][0]:
+			mesa[nponta]=[pontaB]
+		else:
+			mesa[nponta]=[pontaA]
+	else:
+		mesa[nponta]=[pontaA,pontaB]
+	return mesa
 
 
 
