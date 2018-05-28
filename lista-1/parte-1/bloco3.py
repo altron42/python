@@ -134,7 +134,11 @@ def joga_pedra(pedra,mesa,nponta):
 		mesa[nponta]=[pontaA,pontaB]
 	return mesa
 
-
+# P24
+def jogap(mao,mesa):
+	for pedra in mao:
+		if pode_jogar_p(pedra,mesa): return True
+	return False
 
 
 
