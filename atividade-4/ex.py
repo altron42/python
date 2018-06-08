@@ -8,26 +8,23 @@
 
 from math import *
 
-def norep(xs):
-	if len(xs) < 1: return xs
-	elif head(xs)==head(tail(xs)): return norep(tail)
+def norep(xs,dup=None):
+	if len(xs)<2: return xs
+	if dup is not None:
+		try:
+			xs.remove(dup)
+			norep(xs, dup)
+		except ValueError:
+			pass
+	return [head(xs)] + norep(tail(xs), head(xs))
 
+def norep2(xs):
+	if len(xs)<2: return xs
+	elif head(xs)==head(tail(xs)): xs.remove(head(xs))
+	return [head(xs)] + norep(tail(xs))
 
-# Lista com os k primeiros elementos de uma lista xs
-def take(k,xs):
-	return xs[:k]
-# Lista com os elementos de xs seguintes aos k primeiros
-def drop(k,xs):
-	return xs[k:]
-# Primeiro elemento de uma lista xs
 def head(xs):
 	return xs[0]
-# Sublista similar a xs mas sem o primeiro elemento
+
 def tail(xs):
 	return xs[1:]
-# Ultimo elemento de uma lista xs
-def last(xs):
-	return xs[-1]
-# Sublista similar a xs mas sem o ultimo elemento
-def init(xs):
-	return xs[:-1]
