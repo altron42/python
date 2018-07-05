@@ -272,15 +272,17 @@ Escreva uma definição recursiva para a função `norep(xs)`, cuja avaliação 
 
 Considere um baralho de 52 cartas, com 4 naipes ('c','e','o','p') e cada naipe com números: 1 (ás), 2 , ..., 10, 11 (valete), 12 (dama), 13 (rei). Cada carta é representada por uma dupla com um naipe e um número. Uma mão é uma lista de cartas e um jogo é uma lista de 3 ou mais cartas do mesmo naipe, cujos números estão em sequência. Uma mão arrumada é uma mão cujas cartas do mesmo naipe estão em ordem crescente e cada naipe obedece à sequencia 'c'-'e'-'o'-'p'.
 
-1.    Defina a função arruma(mao) cuja avaliação associa uma mão à sua equivalente mão arrumada. Por exemplo:
+1. Defina a função `arruma(mao)` cuja avaliação associa uma mão à sua equivalente mão arrumada. Por exemplo:
+```python
 >>> arruma([('p',6), ('o',11),('p',4), ('p',5),('o',3),('c',10),('o',7)]) 
 [('c',10), ('o',3), ('o',7), ('o',11),('p',4),('p',5), ('p',6)]
 >>> arruma([('e',4),('e',10),('c',1)])
 [('c',1) ,('e',4),('e',10)]
 >>> arruma([('c',1) ,('e',4),('e',10)])
 [('c',1) ,('e',4),('e',10)]
-
-2.    Defina a função completa_seq(mao,naipe) que a partir de uma mão arrumada e um naipe, associa a lista com as cartas que faltam para completar um jogo com as cartas daquele naipe na mão, supondo que exista pelo menos duas cartas daquele naipe na mão. Por exemplo:
+```
+1. Defina a função `completa_seq(mao,naipe)` que a partir de uma mão arrumada e um naipe, associa a lista com as cartas que faltam para completar um jogo com as cartas daquele naipe na mão, supondo que exista pelo menos duas cartas daquele naipe na mão. Por exemplo:
+```python
 >>> completa_seq([('o',3),('o',4),('o',7),('o',9),('o',10),('p',1),('p',3),('p',7)],'p')
 [2,4,5,6]
 >>> completa_seq([('o',3),('o',4),('o',7),('o',9),('o',10),('p',1),('p',3),('p',7)],'o')
@@ -291,15 +293,21 @@ Considere um baralho de 52 cartas, com 4 naipes ('c','e','o','p') e cada naipe c
 []
 >>> completa_seq([('c',5),('c',8),('c',13),('e',1),('e',2)],'c')
 [6,7,9,10,11,12]
-
-3.    Defina a função maiorseq(mao) que, dado uma mão simples (não arrumada), associa o comprimento da sequência de maior tamanho nela. Por exemplo:
+```
+1. Defina a função `maiorseq(mao)` que, dado uma mão simples (não arrumada), associa o comprimento da sequência de maior tamanho nela. Por exemplo:
+```python
 >>> maiorseq([('p',6), ('o',11),('p',4), ('p',5),('o',3),('c',10),('o',7)])
 3
 >>> maiorseq([('c',1) ,('e',4),('e',3)])
 2
 >>> maiorseq([('c',1) ,('e',4),('p',3)])
 1
+```
 
-Questão-bônus (opcional) Defina a função maiorseq2(mao) similar à maiorseq(mao) exceto que para esse caso, considere que a 13ª e a 1ª cartas de qualquer naipe, são consideradas sequências válidas. Por exemplo:
->>>>> maiorseq2([('e',12), ('p',4), ('e',13), ('p',6), ('p',5),('e',1), ('e',2)],)
+#### Questão-bônus (opcional)
+
+Defina a função `maiorseq2(mao)` similar à `maiorseq(mao)` exceto que para esse caso, considere que a 13ª e a 1ª cartas de qualquer naipe, são consideradas sequências válidas. Por exemplo:
+```python
+>>> maiorseq2([('e',12), ('p',4), ('e',13), ('p',6), ('p',5),('e',1), ('e',2)],)
 4
+```
